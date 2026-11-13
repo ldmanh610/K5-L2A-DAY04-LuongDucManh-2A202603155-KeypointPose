@@ -1,0 +1,43 @@
+{
+ "mssv": "2A202603155",
+ "ten": "LuongDucManh",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "MANH610",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000225138.jpg",
+  "000000241837.jpg",
+  "000000292999.jpg",
+  "000000294379.jpg",
+  "000000455536.jpg",
+  "000000109010.jpg",
+  "000000220045.jpg",
+  "000000302102.jpg",
+  "000000307757.jpg",
+  "000000461002.jpg",
+  "000000253584.jpg",
+  "000000130816.jpg"
+ ],
+ "faces": [
+  "face_10579.jpg",
+  "face_141135.jpg",
+  "face_85624.jpg",
+  "face_356144.jpg",
+  "face_416730.jpg",
+  "face_342273.jpg",
+  "face_296767.jpg",
+  "face_79367.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 2,
+   "job_id": 2,
+   "task_name": "persons-LuongDucManh"
+  },
+  "faces": {
+   "task_id": 3,
+   "job_id": 3,
+   "task_name": "faces-LuongDucManh"
+  }
+ }
+}
