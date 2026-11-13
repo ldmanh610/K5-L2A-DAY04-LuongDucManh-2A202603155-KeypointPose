@@ -142,18 +142,28 @@ Nguồn ảnh: COCO val2017 / Wikimedia Commons.
 ## 7. Tự đánh giá
 
 1. Lỗi bạn mắc nhiều nhất hôm nay, và cách bạn sẽ tránh ở dự án thật:
-
+```
+Lỗi mắc nhiều nhất là gán thừa các đối tượng nhỏ dưới ngưỡng kích thước quy định (< 60 px) ở hậu cảnh và nhầm lẫn hướng trái/phải theo góc nhìn của người gán nhãn thay vì trục giải phẫu của nhân vật. Ở dự án thực tế, cần bật hiển thị kích thước bounding box ngay từ đầu để lọc ngưỡng pixel và luôn xác định hướng mặt nhân vật trước khi kéo điểm.
+```
    ...
 
 2. Một quy tắc bạn đề xuất thêm vào guideline (kèm ảnh ví dụ nếu có):
-
+```
+Bổ sung quy tắc kiểm tra nhanh bằng lưới bounding box tối thiểu (ví dụ khung tham chiếu 60×60 px) trên CVAT trước khi đặt skeleton trong các ảnh đám đông (crowd), tránh mất thời gian gán nhãn cho các đối tượng ở quá xa rồi phải xóa bỏ.
+```
    ...
 
 3. Nhãn của bạn đi vào model ở đâu? Chọn một lỗi bạn đã sửa và nói nó sẽ làm model học sai thế nào (heatmap, trọng số trong loss, hay bước lật ảnh):
-
-   ...
+```
+Nhãn keypoint được chuyển thành các bản đồ nhiệt (heatmap) 2D làm ground truth để tính hàm mất mát (loss) với các điểm có cờ v > 0. Nếu để sót lỗi lr_swap (đảo trái/phải), khi huấn luyện áp dụng kỹ thuật tăng cường dữ liệu lật ngang ảnh (horizontal flip) và hoán đổi cặp kênh trái/phải, nhãn sẽ bị gán sai hoàn toàn sang bên đối diện, làm sụp đổ chỉ số OKS và khiến model dự đoán ngược khớp.
+```
+...
 
 ## 8. Khó khăn và lỗi kỹ thuật
+
+```
+Trong quá trình đẩy bài lên GitHub gặp lỗi xác thực 403 Permission denied do Windows Credential Manager lưu thông tin đăng nhập của tài khoản GitHub cũ. Đã khắc phục bằng cách sử dụng Personal Access Token (PAT) trực tiếp trong lệnh git push để đẩy bài lên đúng repository cá nhân
+```
 
 ...
 
