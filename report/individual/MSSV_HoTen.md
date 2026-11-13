@@ -114,7 +114,9 @@ Kết quả: ĐẠT (đọc lại từng cảnh báo ở trên)
 ```
 
 Các `[CẢNH BÁO]` còn giữ nguyên và lý do:
-
+```
+[CẢNH BÁO] 000000292999.jpg #1: cặp elbow nằm ngược phía... và [CẢNH BÁO] 000000294379.jpg #1: cặp ankle nằm ngược phía...: Giữ nguyên vì nhân vật trong ảnh thực tế đang ở tư thế vắt tay / bắt chéo chân tự nhiên, không phải lỗi đảo nhãn trái/phải (lr_swap).
+```
 ...
 
 ## 6. Ảnh chụp màn hình
